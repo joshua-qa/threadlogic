@@ -1,5 +1,10 @@
 # ThreadLogic
 
+---
+# 2021.11.26
+MacOS에서 텍스트 복사할 때 Ctrl+C는 동작하는데 Command+C는 동작하지 않아서 간단하게 한 줄 수정했습니다.
+
+---
 ThreadLogic, an open source Thread Dump Analyzer tool, for the Middleware community.
 This tool was created by Sabha Parameswaran, owner of this repo, (in colloboration with Eric Gross) when he was with Oracle Fusion Middleware Architect Team.
 
