@@ -68,6 +68,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 import javax.swing.plaf.FontUIResource;
+import javax.swing.text.DefaultEditorKit;
 import javax.swing.text.Position;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeSelectionModel;
@@ -97,7 +98,6 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -440,6 +440,8 @@ public class ThreadLogic extends JPanel implements ListSelectionListener, TreeSe
 
     // Add the split pane to this panel.
     add(htmlView, BorderLayout.CENTER);
+
+    htmlPane.getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_C, Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()), new DefaultEditorKit.CopyAction());
 
     statusBar = new StatusBar(!(asJConsolePlugin || asVisualVMPlugin));
     add(statusBar, BorderLayout.SOUTH);
